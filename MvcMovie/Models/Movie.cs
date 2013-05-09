@@ -11,7 +11,7 @@ namespace MvcMovie.Models
         [Required]
         public string Title { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Text)]
         public DateTime ReleaseDate { get; set; }
 
         [Required]
