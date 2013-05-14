@@ -9,6 +9,8 @@ namespace MvcMovie.Models
     public class Movie
     {
         public int MovieID { get; set; }
+        public int RatingID { get; set; }
+        public int GenreID { get; set; }
 
         [Required]
         public string Title { get; set; }
@@ -28,24 +30,22 @@ namespace MvcMovie.Models
         [StringLength(5)]
         public string Rating { get; set; }
 
-        public virtual ICollection<Rating> Ratings { get; set; }
-        public virtual ICollection<Genre> Genres { get; set; }
+        public virtual Genre Genre { get; set; }
+        public virtual Rating Rating { get; set; }
     }
 
     public class Rating
     {
         public int RatingID { get; set; }
-        public int MovieID { get; set; }
         public string Name { get; set; }
-        public virtual Movie Movie { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
     }
 
     public class Genre
     {
         public int GenreID { get; set; }
-        public int MovieID { get; set; }
         public string Name { get; set; }
-        public virtual Movie Movie { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
     }
 
     public class MovieDBContext : DbContext
