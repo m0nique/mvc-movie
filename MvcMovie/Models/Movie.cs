@@ -29,6 +29,7 @@ namespace MvcMovie.Models
         public string Rating { get; set; }
 
         public virtual ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<Genre> Genres { get; set; }
     }
 
     public class Rating
@@ -37,7 +38,6 @@ namespace MvcMovie.Models
         public int MovieID { get; set; }
         public string Name { get; set; }
         public virtual Movie Movie { get; set; }
-
     }
 
     public class Genre
@@ -45,7 +45,7 @@ namespace MvcMovie.Models
         public int GenreID { get; set; }
         public int MovieID { get; set; }
         public string Name { get; set; }
-        public virtual Genre Genre { get; set; }
+        public virtual Movie Movie { get; set; }
     }
 
     public class MovieDBContext : DbContext
