@@ -26,9 +26,9 @@ namespace MvcMovie.Controllers
 
             var GenreLst = new List<string>();
 
-            var GenreQry = from d in db.Movies
-                           orderby d.Genre
-                           select d.Genre;
+            var GenreQry = from d in db.Genres
+                           orderby d.Name
+                           select d.Name;
             GenreLst.AddRange(GenreQry.Distinct());
             ViewBag.movieGenre = new SelectList(GenreLst);
 
@@ -44,7 +44,7 @@ namespace MvcMovie.Controllers
                 return View(movies);
             else
             {
-                return View(movies.Where(x => x.Genre == movieGenre));
+                return View(movies.Where(x => x.Genre.Name == movieGenre));
             } 
         }
 

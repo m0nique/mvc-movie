@@ -10,7 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 
     @using (Html.BeginForm("SearchIndex","Movies",FormMethod.Get)){     
-        <p>Genre: @Html.DropDownList("movieGenre", "All")   
+        <p>Genre: @Html.DropDownList("Genre", "All")   
         Title: @Html.TextBox("SearchString")   
         <input type="submit" value="Filter" /></p> 
     }
@@ -44,18 +44,18 @@
             @Html.DisplayFor(modelItem => item.ReleaseDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Genre)
+            @Html.DisplayFor(modelItem => item.Genre.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Rating)
+            @Html.DisplayFor(modelItem => item.Rating.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID}) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
         </td>
     </tr>
 }
