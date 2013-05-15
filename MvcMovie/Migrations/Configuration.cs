@@ -78,32 +78,32 @@ namespace MvcMovie.Migrations
             );
 
             context.Ratings.AddOrUpdate(i => i.Name,
-                    new Rating
-                    {
-                        Name = "G"
-                    },
+                new Rating
+                {
+                    Name = "G"
+                },
 
-                    new Rating
-                    {
-                        Name = "PG"
-                    },
+                new Rating
+                {
+                    Name = "PG"
+                },
 
-                    new Rating
-                    {
-                        Name = "PG-13"
-                    },
+                new Rating
+                {
+                    Name = "PG-13"
+                },
 
-                    new Rating
-                    {
-                        Name = "R"
-                    },
+                new Rating
+                {
+                    Name = "R"
+                },
 
-                    new Rating
-                    {
-                        Name = "NC-17"
-                    }
+                new Rating
+                {
+                    Name = "NC-17"
+                }
 
-                );
+            );
 
             context.Movies.AddOrUpdate(i => i.Title,
                 new Movie
@@ -112,7 +112,9 @@ namespace MvcMovie.Migrations
                     ReleaseDate = DateTime.Parse("1989-1-11"),
                     Genre = context.Genres.Single(x => x.Name == "Comedy"),
                     Price = 7.99M,
-                    Rating = context.Ratings.Single(x => x.Name == "G")
+                    Rating = context.Ratings.Single(x => x.Name == "G"),
+                    SelectedGenre = "Comedy",
+                    SelectedRating = "G"
                 },
 
                  new Movie
@@ -121,7 +123,9 @@ namespace MvcMovie.Migrations
                      ReleaseDate = DateTime.Parse("1984-3-13"),
                      Genre = context.Genres.Single(x => x.Name == "Comedy"),
                      Price = 8.99M,
-                     Rating = context.Ratings.Single(x => x.Name == "G")
+                     Rating = context.Ratings.Single(x => x.Name == "G"),
+                     SelectedGenre = "Comedy",
+                     SelectedRating = "G"
                  },
 
                  new Movie
@@ -130,7 +134,9 @@ namespace MvcMovie.Migrations
                      ReleaseDate = DateTime.Parse("1986-2-23"),
                      Genre = context.Genres.Single(x => x.Name == "Comedy"),
                      Price = 9.99M,
-                     Rating = context.Ratings.Single(x => x.Name == "G")
+                     Rating = context.Ratings.Single(x => x.Name == "G"),
+                     SelectedGenre = "Comedy",
+                     SelectedRating = "G"
                  },
 
                new Movie
@@ -139,7 +145,9 @@ namespace MvcMovie.Migrations
                    ReleaseDate = DateTime.Parse("1959-4-15"),
                    Genre = context.Genres.Single(x => x.Name == "Western"),
                    Price = 3.99M,
-                   Rating = context.Ratings.Single(x => x.Name == "G")
+                   Rating = context.Ratings.Single(x => x.Name == "G"),
+                   SelectedGenre = "Western",
+                   SelectedRating = "G"
                }
            );
         }

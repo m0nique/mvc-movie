@@ -5,13 +5,13 @@ namespace MvcMovie.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class MoviesData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MoviesData));
         
         string IMigrationMetadata.Id
         {
-            get { return "201305140557446_Initial"; }
+            get { return "201305150453599_MoviesData"; }
         }
         
         string IMigrationMetadata.Source

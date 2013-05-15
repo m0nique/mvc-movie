@@ -189,17 +189,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201305080408275_Initial.cs" />
-    <Compile Include="Migrations\201305080408275_Initial.Designer.cs">
-      <DependentUpon>201305080408275_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201305150452210_Initial.cs" />
+    <Compile Include="Migrations\201305150452210_Initial.Designer.cs">
+      <DependentUpon>201305150452210_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201305080415015_AddRatingMig.cs" />
-    <Compile Include="Migrations\201305080415015_AddRatingMig.Designer.cs">
-      <DependentUpon>201305080415015_AddRatingMig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305080422362_AddDataAnnotationMig.cs" />
-    <Compile Include="Migrations\201305080422362_AddDataAnnotationMig.Designer.cs">
-      <DependentUpon>201305080422362_AddDataAnnotationMig.cs</DependentUpon>
+    <Compile Include="Migrations\201305150453599_MoviesData.cs" />
+    <Compile Include="Migrations\201305150453599_MoviesData.Designer.cs">
+      <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -333,14 +329,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201305080408275_Initial.resx">
-      <DependentUpon>201305080408275_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201305150452210_Initial.resx">
+      <DependentUpon>201305150452210_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305080415015_AddRatingMig.resx">
-      <DependentUpon>201305080415015_AddRatingMig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305080422362_AddDataAnnotationMig.resx">
-      <DependentUpon>201305080422362_AddDataAnnotationMig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201305150453599_MoviesData.resx">
+      <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -35,8 +35,8 @@
             @Html.LabelFor(model => model.Genre.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Genre.Name)
-            @Html.ValidationMessageFor(model => model.Genre.Name)
+            @Html.DropDownListFor(model => model.SelectedGenre, Model.Genres)
+            @Html.ValidationMessageFor(model => model.SelectedGenre)
         </div>
 
         <div class="editor-label">

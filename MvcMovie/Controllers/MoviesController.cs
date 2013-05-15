@@ -84,6 +84,8 @@ namespace MvcMovie.Controllers
             }
 
             return View(movie);
+
+            
         }
 
         //
@@ -92,6 +94,7 @@ namespace MvcMovie.Controllers
         public ActionResult Edit(int id = 0)
         {
             Movie movie = db.Movies.Find(id);
+
             if (movie == null)
             {
                 return HttpNotFound();
@@ -112,6 +115,13 @@ namespace MvcMovie.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            movie.Genres = db.Genres.ToArray().Select(x => new SelectListItem
+            {
+                Value = x.GenreID.ToString(),
+                Text = x.Name
+            });
+
             return View(movie);
         }
 

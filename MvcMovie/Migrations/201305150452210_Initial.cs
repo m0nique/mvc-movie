@@ -26,6 +26,8 @@ namespace MvcMovie.Migrations
                         Title = c.String(nullable: false),
                         ReleaseDate = c.DateTime(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        SelectedGenre = c.String(),
+                        SelectedRating = c.String(),
                     })
                 .PrimaryKey(t => t.MovieID)
                 .ForeignKey("dbo.Genres", t => t.GenreID, cascadeDelete: true)
