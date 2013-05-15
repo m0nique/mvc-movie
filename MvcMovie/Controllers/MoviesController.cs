@@ -128,10 +128,6 @@ namespace MvcMovie.Controllers
                             orderby d.Name
                             select d.Name;
 
-            var currentGenre = db.Genres.Select(e => new SelectListItem { Text = e.Name , Value = e.Name });
-
-            ViewData["curGenre"] = currentGenre;
-
             GenreLst.AddRange(GenreQry.Distinct());
             ViewBag.movieGenre = new SelectList(GenreLst);
 
@@ -140,10 +136,6 @@ namespace MvcMovie.Controllers
             var RatingQry = from d in db.Ratings
                             orderby d.Name
                             select d.Name;
-
-            var currentRating = db.Ratings.Select(e => new SelectListItem { Text = e.Name , Value = e.Name });
-
-            ViewData["curRating"] = currentRating;
 
             RatingLst.AddRange(RatingQry.Distinct());
             ViewBag.movieRating = new SelectList(RatingLst);

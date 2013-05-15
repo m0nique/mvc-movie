@@ -189,21 +189,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201305150452210_Initial.cs" />
-    <Compile Include="Migrations\201305150452210_Initial.Designer.cs">
-      <DependentUpon>201305150452210_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305150453599_MoviesData.cs" />
-    <Compile Include="Migrations\201305150453599_MoviesData.Designer.cs">
-      <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305150553160_RemoveIEnumerable.cs" />
-    <Compile Include="Migrations\201305150553160_RemoveIEnumerable.Designer.cs">
-      <DependentUpon>201305150553160_RemoveIEnumerable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201305150643415_Fixes.cs" />
-    <Compile Include="Migrations\201305150643415_Fixes.Designer.cs">
-      <DependentUpon>201305150643415_Fixes.cs</DependentUpon>
+    <Compile Include="Migrations\201305151406324_Initial.cs" />
+    <Compile Include="Migrations\201305151406324_Initial.Designer.cs">
+      <DependentUpon>201305151406324_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -337,17 +325,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201305150452210_Initial.resx">
-      <DependentUpon>201305150452210_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305150453599_MoviesData.resx">
-      <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305150553160_RemoveIEnumerable.resx">
-      <DependentUpon>201305150553160_RemoveIEnumerable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201305150643415_Fixes.resx">
-      <DependentUpon>201305150643415_Fixes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201305151406324_Initial.resx">
+      <DependentUpon>201305151406324_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

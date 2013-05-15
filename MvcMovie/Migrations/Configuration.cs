@@ -105,7 +105,7 @@ namespace MvcMovie.Migrations
 
             );
 
-            context.SaveChange();
+            context.SaveChanges();
 
             context.Movies.AddOrUpdate(i => i.Title,
                 new Movie
@@ -145,7 +145,7 @@ namespace MvcMovie.Migrations
                }
            );
 
-           context.SaveChange();
+            context.SaveChanges();
         }
     }
 }

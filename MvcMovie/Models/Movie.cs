@@ -52,10 +52,5 @@ namespace MvcMovie.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Rating> Ratings { get; set; }        
         public DbSet<Movie> Movies { get; set; }
-
-        internal void SaveChange()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
