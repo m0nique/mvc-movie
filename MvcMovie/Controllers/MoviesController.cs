@@ -32,8 +32,8 @@ namespace MvcMovie.Controllers
             GenreLst.AddRange(GenreQry.Distinct());
             ViewBag.movieGenre = new SelectList(GenreLst);
 
-            var movies = from m in db.Movies
-                         select m;
+            var movies = (from m in db.Movies
+                         select m).Include("Genre").Include("Rating");
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -66,6 +66,28 @@ namespace MvcMovie.Controllers
 
         public ActionResult Create()
         {
+            var GenreLst = new List<string>();
+
+            var GenreQry = from d in db.Genres
+                           orderby d.Name
+                           select d.Name;
+            GenreLst.AddRange(GenreQry.Distinct());
+            ViewBag.movieGenre = new SelectList(GenreLst);
+
+            var genres = from m in db.Movies
+                         select m;
+
+            var RatingLst = new List<string>();
+
+            var RatingQry = from d in db.Ratings
+                           orderby d.Name
+                           select d.Name;
+            RatingLst.AddRange(RatingQry.Distinct());
+            ViewBag.movieRating = new SelectList(RatingLst);
+
+            var ratings = from m in db.Movies
+                         select m;
+
             return View();
         }
 
@@ -99,6 +121,33 @@ namespace MvcMovie.Controllers
             {
                 return HttpNotFound();
             }
+
+            var GenreLst = new List<string>();
+
+            var GenreQry = from d in db.Genres
+                            orderby d.Name
+                            select d.Name;
+
+            var currentGenre = db.Genres.Select(e => new SelectListItem { Text = e.Name , Value = e.Name });
+
+            ViewData["curGenre"] = currentGenre;
+
+            GenreLst.AddRange(GenreQry.Distinct());
+            ViewBag.movieGenre = new SelectList(GenreLst);
+
+            var RatingLst = new List<string>();
+
+            var RatingQry = from d in db.Ratings
+                            orderby d.Name
+                            select d.Name;
+
+            var currentRating = db.Ratings.Select(e => new SelectListItem { Text = e.Name , Value = e.Name });
+
+            ViewData["curRating"] = currentRating;
+
+            RatingLst.AddRange(RatingQry.Distinct());
+            ViewBag.movieRating = new SelectList(RatingLst);
+
             return View(movie);
         }
 
@@ -115,12 +164,6 @@ namespace MvcMovie.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            movie.Genres = db.Genres.ToArray().Select(x => new SelectListItem
-            {
-                Value = x.GenreID.ToString(),
-                Text = x.Name
-            });
 
             return View(movie);
         }

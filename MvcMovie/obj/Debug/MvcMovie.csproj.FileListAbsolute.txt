@@ -170,9 +170,10 @@ C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\bin\ru\System.Spatial.resou
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.csprojResolveAssemblyReference.cache
-C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.Initial.resources
-C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.AddRatingMig.resources
-C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.AddDataAnnotationMig.resources
-C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.csproj.GenerateResource.Cache
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.dll
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.pdb
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.Initial.resources
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.csproj.GenerateResource.Cache
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.MoviesData.resources
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.RemoveIEnumerable.resources
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.Fixes.resources

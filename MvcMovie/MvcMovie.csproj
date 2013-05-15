@@ -197,6 +197,14 @@
     <Compile Include="Migrations\201305150453599_MoviesData.Designer.cs">
       <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305150553160_RemoveIEnumerable.cs" />
+    <Compile Include="Migrations\201305150553160_RemoveIEnumerable.Designer.cs">
+      <DependentUpon>201305150553160_RemoveIEnumerable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305150643415_Fixes.cs" />
+    <Compile Include="Migrations\201305150643415_Fixes.Designer.cs">
+      <DependentUpon>201305150643415_Fixes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -334,6 +342,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305150453599_MoviesData.resx">
       <DependentUpon>201305150453599_MoviesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305150553160_RemoveIEnumerable.resx">
+      <DependentUpon>201305150553160_RemoveIEnumerable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305150643415_Fixes.resx">
+      <DependentUpon>201305150643415_Fixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

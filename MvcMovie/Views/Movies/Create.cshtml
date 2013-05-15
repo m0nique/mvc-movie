@@ -33,7 +33,7 @@
             @Html.LabelFor(model => model.Genre)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Genre)
+            @Html.DropDownList("movieGenre", "All")
             @Html.ValidationMessageFor(model => model.Genre)
         </div>
 
@@ -49,7 +49,7 @@
             @Html.LabelFor(model => model.Rating)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Rating)
+            @Html.DropDownList("movieRating", "All")
             @Html.ValidationMessageFor(model => model.Rating)
         </div>
 

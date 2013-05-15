@@ -45,12 +45,6 @@ namespace MvcMovie.Models
 
         public virtual Genre Genre { get; set; }
         public virtual Rating Rating { get; set; }
-
-        public string SelectedGenre { get; set; }
-        public IEnumerable<SelectListItem> Genres { get; set; }
-
-        public string SelectedRating { get; set; }
-        public IEnumerable<SelectListItem> Ratings { get; set; }
     }
 
     public class MovieDBContext : DbContext
@@ -58,5 +52,10 @@ namespace MvcMovie.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Rating> Ratings { get; set; }        
         public DbSet<Movie> Movies { get; set; }
+
+        internal void SaveChange()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

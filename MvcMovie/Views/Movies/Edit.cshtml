@@ -35,8 +35,8 @@
             @Html.LabelFor(model => model.Genre.Name)
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.SelectedGenre, Model.Genres)
-            @Html.ValidationMessageFor(model => model.SelectedGenre)
+            @Html.DropDownList("movieGenre", Model.Genre.Name)
+            @Html.ValidationMessageFor(model => model.Genre.Name)
         </div>
 
         <div class="editor-label">
@@ -51,7 +51,7 @@
             @Html.LabelFor(model => model.Rating.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Rating.Name)
+            @Html.DropDownList("movieRating", Model.Rating.Name)
             @Html.ValidationMessageFor(model => model.Rating.Name)
         </div>
 

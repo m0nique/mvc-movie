@@ -14,7 +14,7 @@
         Title: @Html.TextBox("SearchString")   
         <input type="submit" value="Filter" /></p> 
     }
-</p>s
+</p>
 
 <table>
     <tr>
@@ -53,7 +53,7 @@
             @Html.DisplayFor(modelItem => item.Rating.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID}) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
             @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
         </td>
