@@ -193,6 +193,10 @@
     <Compile Include="Migrations\201305151406324_Initial.Designer.cs">
       <DependentUpon>201305151406324_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305151832354_Changes.cs" />
+    <Compile Include="Migrations\201305151832354_Changes.Designer.cs">
+      <DependentUpon>201305151832354_Changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -327,6 +331,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201305151406324_Initial.resx">
       <DependentUpon>201305151406324_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305151832354_Changes.resx">
+      <DependentUpon>201305151832354_Changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

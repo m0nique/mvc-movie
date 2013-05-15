@@ -32,10 +32,10 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Genre.Name)
+            @Html.LabelFor(model => model.Genre)
         </div>
         <div class="editor-field">
-            @Html.DropDownList("movieGenre", Model.Genre.Name)
+            @Html.DropDownListFor(m => m.GenreID, (SelectList)ViewBag.movieGenre)
             @Html.ValidationMessageFor(model => model.Genre.Name)
         </div>
 
@@ -48,10 +48,10 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Rating.Name)
+            @Html.LabelFor(model => model.Rating)
         </div>
         <div class="editor-field">
-            @Html.DropDownList("movieRating", Model.Rating.Name)
+            @Html.DropDownListFor(m => m.RatingID, (SelectList)ViewBag.movieRating)
             @Html.ValidationMessageFor(model => model.Rating.Name)
         </div>
 

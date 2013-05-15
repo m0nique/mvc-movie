@@ -66,24 +66,18 @@ namespace MvcMovie.Controllers
 
         public ActionResult Create()
         {
-            var GenreLst = new List<string>();
-
-            var GenreQry = from d in db.Genres
+            var GenreLst = (from d in db.Genres
                            orderby d.Name
-                           select d.Name;
-            GenreLst.AddRange(GenreQry.Distinct());
-            ViewBag.movieGenre = new SelectList(GenreLst);
+                           select d).ToList();
+            ViewBag.movieGenre = new SelectList(GenreLst, "GenreID", "Name");
 
             var genres = from m in db.Movies
                          select m;
 
-            var RatingLst = new List<string>();
-
-            var RatingQry = from d in db.Ratings
+            var RatingLst = (from d in db.Ratings
                            orderby d.Name
-                           select d.Name;
-            RatingLst.AddRange(RatingQry.Distinct());
-            ViewBag.movieRating = new SelectList(RatingLst);
+                           select d).ToList();
+            ViewBag.movieRating = new SelectList(RatingLst, "RatingID", "Name");
 
             var ratings = from m in db.Movies
                          select m;
@@ -122,23 +116,15 @@ namespace MvcMovie.Controllers
                 return HttpNotFound();
             }
 
-            var GenreLst = new List<string>();
-
-            var GenreQry = from d in db.Genres
+            var GenreLst = from d in db.Genres
                             orderby d.Name
-                            select d.Name;
+                            select d;
+            ViewBag.movieGenre = new SelectList(GenreLst, "GenreID", "Name", movie.Genre);
 
-            GenreLst.AddRange(GenreQry.Distinct());
-            ViewBag.movieGenre = new SelectList(GenreLst);
-
-            var RatingLst = new List<string>();
-
-            var RatingQry = from d in db.Ratings
+            var RatingLst = (from d in db.Ratings
                             orderby d.Name
-                            select d.Name;
-
-            RatingLst.AddRange(RatingQry.Distinct());
-            ViewBag.movieRating = new SelectList(RatingLst);
+                            select d).ToList();
+            ViewBag.movieRating = new SelectList(RatingLst, "RatingID", "Name", movie.Rating);
 
             return View(movie);
         }

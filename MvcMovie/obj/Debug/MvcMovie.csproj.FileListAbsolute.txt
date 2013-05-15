@@ -174,3 +174,4 @@ C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.dll
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.pdb
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.Initial.resources
 C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.csproj.GenerateResource.Cache
+C:\Users\Monique\Documents\GitHub\mvc-movie\MvcMovie\obj\Debug\MvcMovie.Migrations.Changes.resources

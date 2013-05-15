@@ -114,7 +114,9 @@ namespace MvcMovie.Migrations
                     ReleaseDate = DateTime.Parse("1989-1-11"),
                     Genre = context.Genres.Single(x => x.Name == "Comedy"),
                     Price = 7.99M,
-                    Rating = context.Ratings.Single(x => x.Name == "G")
+                    Rating = context.Ratings.Single(x => x.Name == "G"),
+                    GenreID = context.Genres.Single(x => x.Name == "Comedy").GenreID,
+                    RatingID = context.Ratings.Single(x => x.Name == "G").RatingID
                 },
 
                  new Movie
@@ -123,7 +125,9 @@ namespace MvcMovie.Migrations
                      ReleaseDate = DateTime.Parse("1984-3-13"),
                      Genre = context.Genres.Single(x => x.Name == "Comedy"),
                      Price = 8.99M,
-                     Rating = context.Ratings.Single(x => x.Name == "G")
+                     Rating = context.Ratings.Single(x => x.Name == "G"),
+                     GenreID = context.Genres.Single(x => x.Name == "Comedy").GenreID,
+                     RatingID = context.Ratings.Single(x => x.Name == "G").RatingID
                  },
 
                  new Movie
@@ -132,7 +136,9 @@ namespace MvcMovie.Migrations
                      ReleaseDate = DateTime.Parse("1986-2-23"),
                      Genre = context.Genres.Single(x => x.Name == "Comedy"),
                      Price = 9.99M,
-                     Rating = context.Ratings.Single(x => x.Name == "G")
+                     Rating = context.Ratings.Single(x => x.Name == "G"),
+                     GenreID = context.Genres.Single(x => x.Name == "Comedy").GenreID,
+                     RatingID = context.Ratings.Single(x => x.Name == "G").RatingID
                  },
 
                new Movie
@@ -141,7 +147,9 @@ namespace MvcMovie.Migrations
                    ReleaseDate = DateTime.Parse("1959-4-15"),
                    Genre = context.Genres.Single(x => x.Name == "Western"),
                    Price = 3.99M,
-                   Rating = context.Ratings.Single(x => x.Name == "G")
+                   Rating = context.Ratings.Single(x => x.Name == "G"),
+                   GenreID = context.Genres.Single(x => x.Name == "Western").GenreID,
+                   RatingID = context.Ratings.Single(x => x.Name == "G").RatingID
                }
            );
 
