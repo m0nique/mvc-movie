@@ -27,7 +27,7 @@
          @Html.DisplayNameFor(model => model.Genre)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Genre)
+        @Html.DisplayFor(model => model.Genre.Name)
     </div>
 
     <div class="display-label">
@@ -41,10 +41,10 @@
          @Html.DisplayNameFor(model => model.Rating)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Rating)
+        @Html.DisplayFor(model => model.Rating.Name)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MovieID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

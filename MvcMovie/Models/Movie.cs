@@ -3,9 +3,24 @@ using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace MvcMovie.Models
 {
+    public class Rating
+    {
+        public int RatingID { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
+    }
+
+    public class Genre
+    {
+        public int GenreID { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
+    }
+
     public class Movie
     {
         public int MovieID { get; set; }
@@ -32,24 +47,10 @@ namespace MvcMovie.Models
         public virtual Rating Rating { get; set; }
     }
 
-    public class Rating
-    {
-        public int RatingID { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<Movie> Movies { get; set; }
-    }
-
-    public class Genre
-    {
-        public int GenreID { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<Movie> Movies { get; set; }
-    }
-
     public class MovieDBContext : DbContext
     {
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Rating> Ratings { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Rating> Ratings { get; set; }        
+        public DbSet<Movie> Movies { get; set; }
     }
 }

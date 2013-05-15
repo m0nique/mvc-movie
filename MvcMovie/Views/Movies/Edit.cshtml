@@ -13,7 +13,7 @@
     <fieldset>
         <legend>Movie</legend>
 
-        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.MovieID)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Title)
@@ -32,11 +32,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Genre)
+            @Html.LabelFor(model => model.Genre.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Genre)
-            @Html.ValidationMessageFor(model => model.Genre)
+            @Html.EditorFor(model => model.Genre.Name)
+            @Html.ValidationMessageFor(model => model.Genre.Name)
         </div>
 
         <div class="editor-label">
@@ -48,11 +48,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Rating)
+            @Html.LabelFor(model => model.Rating.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Rating)
-            @Html.ValidationMessageFor(model => model.Rating)
+            @Html.EditorFor(model => model.Rating.Name)
+            @Html.ValidationMessageFor(model => model.Rating.Name)
         </div>
 
         <p>
